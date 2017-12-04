@@ -1,0 +1,1054 @@
+<audio src="music.mp3" autoplay="autoplay"></audio>
+<script src="jquery-3.2.1.min.js"></script>
+
+
+<style>
+
+#hp2
+{
+transition:1s;
+}
+
+.skill
+{
+cursor:pointer;
+}
+
+
+#op
+{
+transition:1s;
+}
+.panel
+{
+-webkit-box-shadow: -4px -3px 81px -1px rgba(0,0,0,1);
+-moz-box-shadow: -4px -3px 81px -1px rgba(0,0,0,1);
+box-shadow: -4px -3px 81px -1px rgba(0,0,0,1);
+}
+
+
+
+#blizzard
+{
+cursor:pointer;
+}
+
+#blizzard:hover
+{
+opacity:0.7;
+}
+
+body
+{
+-moz-user-select: none;
+-khtml-user-select: none;
+user-select: none;  
+}
+   
+
+
+
+.qqq
+{
+
+border-radius:10px;
+}
+
+
+
+
+
+
+
+.qwe
+{
+cursor:pointer;
+display:none;
+}  
+.orc
+{
+
+transition:1s;
+
+
+}
+
+.x
+{
+cursor:pointer;
+}
+
+
+.x5
+{
+cursor:pointer;
+}
+
+
+
+</style>
+
+
+
+
+
+
+<div id=game style="width:568;height:403;background:url(skyx.png);position:absolute;">
+
+</div>
+
+<div id="c" oncontextmenu="castle(this);return false;" onclick="q(this)" style="z-index:10;cursor:pointer;width:240;height:207;background:url(pyramid15.png);background-size:100% 100%;left:330;top:170;position:absolute;"></div>
+
+
+<div id=game2 style="overflow:hidden;border:1px solid black;width:568;height:403;position:absolute;">
+
+
+
+
+
+
+</div>
+<div id="gold" style="font-family:Calibri;color:yellow;position:absolute;left:27;top:14;font-weight:bold;z-index:10000;">0</div>
+<div id="gold2" style="background:url(gold.png);background-size:100% 100%;width:17;height:17;position:absolute;left:10;top:15;font-weight:bold;z-index:1000000000000;"></div>
+
+
+
+<div class="panel" style="width:570;height:40;background:black;position:absolute;"></div>
+
+
+
+<div class="panel" style="z-index:100000000;overflow:hidden;width:25;height:405;background:linear-gradient(to top, grey, rgb(120, 120, 120));border:1px solid black;position:absolute;left:575;">
+
+<div id="op" style="border-radius:25px;width:40;height:0;background:green;border:1px solid black;position:absolute;left:0;border-radius:0;"></div>
+
+
+</div>
+
+
+<div class="panel" style="width:570;height:40;background:black;position:absolute;top:375;"></div>
+
+
+
+
+<div class="panel" style="width:570;height:50;background:rgb(25, 25, 25);position:absolute;top:45;opacity:0.4;border-bottom-left-radius:29px;border-bottom-right-radius:29px;">
+
+
+
+</div>
+
+
+
+
+
+
+<div class="skill" onclick="f(this)" style="border-radius:5px;color:black;overflow:hidden;width:80;height:43;background-color:black;background-image:url(f10.png);background-size:100% 100%;position:absolute;top:50;opacity:1.0;left:20;z-index:10000000000;font-weight:bold;font-family:Calibri;line-height:2;margin-left:5;text-indent:50;">10</div>
+
+
+
+
+
+<div id="hp" style="border-radius:50px;width:258;height:10;background:white;position:absolute;top:150;left:320;"></div>
+<div id="hp2" style="border-radius:50px;width:258;height:10;background:red;position:absolute;top:150;left:320;"></div>
+
+
+<div id="expj" style="z-index:100;position:absolute;top:110;left:412;font-size:150%;font-family:Calibri;font-weight:bold;">LEVEL 1</div>
+
+
+
+
+
+<div class="qwe" style="opacity:0.5;z-index:1000000000;width:40;height:45;background:white;border:2px solid black;position:absolute;top:210;left:335;border-radius:50%;"></div>
+
+<div class="qwe" style="opacity:0.5;z-index:1000000000;width:40;height:45;background:white;border:2px solid black;position:absolute;top:250;left:429;border-radius:50%;"></div>
+
+
+
+<div class="qwe" style="opacity:0.5;z-index:1000000000;width:40;height:45;background:white;border:2px solid black;position:absolute;top:240;left:519;border-radius:50%;"></div>
+
+
+
+
+<div class="qwe" style="opacity:0.5;z-index:1000000000;width:40;height:45;background:white;border:2px solid black;position:absolute;top:180;left:439;border-radius:50%;"></div>
+
+
+
+
+
+<div class="qqq" style="border:none;width:50;height:38;background-image:url(c.png);background-color:black;background-size:100% 100%;position:absolute;top:8;left:72;"></div>
+
+
+<div class="qqq" style="width:50;height:38;background-color:black;background-image:url(pyramid15.png);background-size:100% 100%;position:absolute;top:8;left:133;"></div>
+<div class="qqq" style="width:50;height:38;background-color:black;background-image:url(f2.png);background-size:100% 100%;position:absolute;top:8;left:193;"></div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div id="g"  style="opacity:0.8;border:1px solid black;width:50;height:38;background-image:url(g.png);background-size:100% 100%;position:absolute;top:8;left:72;"></div>
+
+
+
+<script>
+l2=15
+function f(t)
+{
+
+if(hp2.offsetWidth==258){return false}
+
+
+
+
+if(hp2.offsetWidth+86>=258)
+{
+
+gold10=+gold.innerHTML
+p=+t.innerHTML
+
+if(gold10>=+t.innerHTML)
+{
+t.innerHTML=+t.innerHTML+l2
+l2+=l2
+gold.innerHTML=gold10-p
+
+hp2.style.width=258
+
+
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(hp2.offsetWidth+86<=258)
+{
+
+gold10=+gold.innerHTML
+p=+t.innerHTML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if(gold10>=+t.innerHTML)
+{
+t.innerHTML=+t.innerHTML+l2
+l2+=l2
+gold.innerHTML=gold10-p
+
+hp2.style.width=hp2.offsetWidth+86
+}
+
+
+if(hp2.offsetWidth>258){hp2.style.width=258}
+
+
+}
+
+
+
+}
+
+i10={
+pyramid:{qj:"url(guard5.gif)", gold:"url(xcc.png)", img:"url(pyramid15.png)", xcj:"url(xc2.png)", x:133, sky:"url(sky_sand.png)"},
+castlexc:{qj:"url(orc2.gif)", gold:"url(gold.png)",img:"url(c.png)", xcj:"url(xc.png)", x:72, sky:"url(sky5.png)"},
+
+xcx:{qj:"url(ghoul.gif)", gold:"url(qxc.png)", img:"url(f.png)", xcj:"url(xc10.png)", x:193, sky:"url(sky_f.png)"},
+
+
+
+
+}
+
+qj="url(orc.gif)"
+qj2="url(orc2.gif)"
+
+
+levels = 
+{
+2:{x:"pyramid"},
+3:{x:"xcx"}
+}
+
+xcj = "url(xc.png)"
+sound2 = "x5.mp3" 
+castlej = "url(c.png)"
+
+
+
+
+function castleset(t, p)
+{
+
+
+c=document.getElementById("c")
+xcj=i10[p].xcj
+c.style.background=i10[p].img
+c.style.backgroundSize="100% 100%"
+g.style.left=i10[p].x
+game.style.background=i10[p].sky
+gold2.style.background=i10[p].gold
+gold2.style.backgroundSize="100% 100%"
+qj=qj2=i10[p].qj
+
+
+
+
+
+
+
+}
+
+
+goldxx = 
+[
+"url(xc2.png)",
+"url(xc.png)",
+
+
+
+]
+
+
+function sound(src)
+{
+
+
+audio=document.createElement("audio")
+audio.autoplay="autoplay"
+audio.src=src
+document.body.appendChild(audio)
+
+
+}
+
+speed=25
+
+function exp2(x)
+{
+
+
+
+
+
+
+exp+=x
+if(exp>maxexp){maxexp+=exp;lvl+=1;exp=0;}
+expj.innerHTML="LEVEL " + lvl
+
+speed+=3
+if(lvl>1)
+{
+castleset("", levels[lvl].x)
+}
+
+
+op.style.height=(407/maxexp)*exp
+
+
+
+}
+
+lvl=1
+exp=0
+maxexp=90
+
+
+function castle(t)
+{
+
+
+
+
+
+
+}
+
+document.addEventListener('mousemove',function(e){
+  if( e.target.getAttribute('unselectable')=='on' )
+    e.target.ownerDocument.defaultView.getSelection().removeAllRanges();
+},false);
+
+orcx=false
+s=0
+orc=0
+function c2(t)
+{
+
+t.style.width=260
+t.style.height=227
+t.style.left=320
+t.style.top=160
+
+
+
+}
+
+
+
+function c5(t)
+{
+
+t.style.width=240
+t.style.height=207
+t.style.left=330
+t.style.top=170
+
+
+
+}
+
+
+
+
+var X
+var Y
+
+function c_click(x, y)
+{
+
+
+
+
+}
+
+qx=1
+setInterval(function()
+{
+
+qx+=1
+
+for(j=0;j<document.getElementsByClassName("orc").length;j++)
+{
+j2=document.getElementsByClassName("orc")[j]
+
+
+j2.style.left=j2.offsetLeft+speed
+
+if(j2.offsetLeft>350)
+{
+j2.remove()
+hp2.style.width=hp2.offsetWidth-5
+
+}
+
+
+
+
+}
+
+
+
+
+
+}, 100)
+
+
+window.onload=function()
+{
+
+
+c.style.background=castlej
+c.style.backgroundSize="100% 100%"
+div=document.createElement("div")
+
+if(orc==0)
+{
+div.style.background=qj
+}
+if(orc==1)
+{
+div.style.background=qj2
+
+}
+
+
+orc=Math.abs(!orc)
+
+div.style.position="absolute"
+div.style.width=60
+div.style.height=60
+div.style.left=0
+div.style.top=290
+div.className="orc"
+div.id="orc"+s
+div.hp=100
+div.style.zIndex=100
+//$(div).animate({"left":360}, 5660)
+game2.appendChild(div)
+
+div.setAttribute("onclick", "kill(this)")
+
+
+div.style.backgroundSize="100% 100%"
+
+
+
+
+
+
+
+}
+
+setInterval(function()
+{
+
+
+
+
+div=document.createElement("div")
+
+if(orc==0)
+{
+div.style.background=qj
+}
+if(orc==1)
+{
+div.style.background=qj2
+
+}
+
+
+orc=Math.abs(!orc)
+
+div.style.position="absolute"
+div.style.width=60
+div.style.height=60
+div.style.left=0
+div.style.top=290
+div.className="orc"
+div.id="orc"+s
+div.hp=100
+div.style.zIndex=100
+//$(div).animate({"left":360}, 5660)
+game2.appendChild(div)
+
+div.setAttribute("onclick", "kill(this)")
+
+if(qj=="url(ghoul.gif)")
+{
+
+div.style.width=70
+
+div.style.backgroundSize="100% 100%"
+
+
+}
+
+
+
+
+
+div.style.backgroundSize="100% 100%"
+
+
+
+
+
+
+
+
+
+}, 5000)
+
+
+
+document.onmousemove=function(e)
+{
+
+
+X=e.clientX
+Y=e.clientY
+
+}
+
+document.onclick=function(e)
+{
+
+elem=document.elementFromPoint(e.clientX, e.clientY)
+
+
+
+
+
+
+
+
+
+
+
+if(elem.id!="game"&&elem.id!="game2"&&elem.className!="x"){return false}
+
+
+
+
+for(c=0; c<document.elementsFromPoint(e.clientX, e.clientY).length; c++)
+{
+if(document.elementsFromPoint(e.clientX, e.clientY)[c].id=="c"){
+
+return false
+
+}
+}
+
+
+
+for(c=0; c<document.elementsFromPoint(e.clientX, e.clientY).length; c++)
+{
+if(document.elementsFromPoint(e.clientX, e.clientY)[c].className=="orc"){
+
+return false
+
+}
+}
+
+
+
+
+div=document.createElement("div")
+div.style.background="url(x.png)"
+div.style.backgroundSize="100% 100%"
+div.style.position="absolute"
+div.style.width=120
+div.style.height=120
+div.style.left=e.clientX-60
+div.style.top=e.clientY-60
+div.className="x"
+div.setAttribute("onclick", "c_click(X, Y)")
+div.style.zIndex=500
+$(div).animate({"opacity":0.0, "width":240, "height":240, "left":e.clientX-120, "top":e.clientY-120}, 400)
+
+
+setTimeout(function(div)
+{
+
+
+div.remove()
+
+
+},400,div)
+
+document.body.appendChild(div)
+
+
+
+}
+
+
+
+
+
+
+
+function q5(t)
+{
+
+
+
+sound(sound2)
+q10=false
+for(c=0; c<document.elementsFromPoint(X, Y).length; c++)
+{
+if(document.elementsFromPoint(X, Y)[c].id=="c"){
+q10=true
+}
+}
+
+
+
+
+if(q10==true)
+{
+
+div=document.createElement("div")
+div.style.background=xcj
+div.style.backgroundSize="100% 100%"
+div.style.position="absolute"
+div.style.width=120
+div.style.height=120
+div.style.left=X-60
+div.style.top=Y-60
+div.className="x5"
+div.style.zIndex=500
+div.setAttribute("onclick", "q5(this)")
+
+gold.innerHTML=+gold.innerHTML+lvl
+
+
+
+
+
+c=document.getElementById("c")
+
+c.style.width=260
+c.style.height=227
+c.style.left=320
+c.style.top=160
+
+setTimeout(function(c)
+{
+
+
+c.style.width=240
+c.style.height=207
+c.style.left=330
+c.style.top=170
+
+
+
+
+}, 200, c)
+
+
+
+
+
+
+
+
+
+$(div).animate({"opacity":0.0, "width":240, "height":240, "left":X-120, "top":-120}, 700)
+
+
+
+
+document.body.appendChild(div)
+
+
+
+}
+
+}
+
+
+function q(t)
+{
+
+
+gold.innerHTML=+gold.innerHTML+lvl
+
+sound(sound2)
+
+div=document.createElement("div")
+div.style.background=xcj
+div.style.backgroundSize="100% 100%"
+div.style.position="absolute"
+div.style.width=120
+div.style.height=120
+div.style.left=X-60
+div.style.top=Y-60
+div.className="x5"
+div.style.zIndex=500
+div.setAttribute("onclick", "q5(this)")
+
+
+c=document.getElementById("c")
+
+c.style.width=260
+c.style.height=227
+c.style.left=320
+c.style.top=160
+
+setTimeout(function(c)
+{
+
+
+c.style.width=240
+c.style.height=207
+c.style.left=330
+c.style.top=170
+
+
+
+
+}, 200, c)
+
+
+
+
+
+
+
+
+$(div).animate({"opacity":0.0, "width":240, "height":240, "left":X-120, "top":-120}, 700)
+
+
+setTimeout(function(div)
+{
+
+
+div.remove()
+
+
+},410,div)
+
+document.body.appendChild(div)
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+function kill2(t)
+{
+
+
+
+for(l=0; l<document.elementsFromPoint(X, Y).length; l++)
+{
+if(document.elementsFromPoint(X, Y)[l].className=="orc"){
+
+orcx=document.elementsFromPoint(X, Y)[l]
+
+}
+}
+
+
+
+div=document.createElement("div")
+div.style.background="url(xx.png)"
+div.style.backgroundSize="100% 100%"
+div.style.position="absolute"
+div.style.width=120
+div.style.height=120
+div.style.left=X-60
+div.style.top=Y-60
+div.className="xx"
+if(orcx)
+{
+orcx.hp-=10
+
+
+
+
+if(orcx.hp<1){
+if(document.getElementById(orcx.id))
+{
+exp2(10)
+}
+
+orcx.remove()
+orcx=false
+
+
+
+
+
+}
+
+
+
+
+}
+div.setAttribute("onclick", "kill2(this)")
+
+div2=document.getElementById(t.t)
+
+
+div.style.zIndex=500
+$(div).animate({"opacity":0.0, "width":240, "height":240, "left":X-120, "top":Y-120}, 400)
+
+
+setTimeout(function(div)
+{
+
+
+div.remove()
+
+
+},400,div)
+
+document.body.appendChild(div)
+
+
+
+}
+
+
+
+
+
+function kill(t)
+{
+
+
+
+div=document.createElement("div")
+div.style.background="url(xx.png)"
+div.style.backgroundSize="100% 100%"
+div.style.position="absolute"
+div.style.width=120
+div.style.height=120
+div.style.left=X-60
+div.style.top=Y-60
+div.className="xx"
+div.t=t.id
+t.hp-=10
+orcx=t
+div.setAttribute("onclick", "kill2(this)")
+
+if(orcx)
+{
+orcx.hp-=10
+if(orcx.hp<0){orcx.remove();exp2(10)
+
+
+
+
+}
+
+
+
+
+}
+
+
+div.style.zIndex=500
+$(div).animate({"opacity":0.0, "width":240, "height":240, "left":X-120, "top":Y-120}, 400)
+
+setTimeout(function(div)
+{
+
+
+div.remove()
+
+
+},400,div)
+
+document.body.appendChild(div)
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function preventSelection(element){
+  var preventSelection = false;
+
+  function addHandler(element, event, handler){
+    if (element.attachEvent) 
+      element.attachEvent('on' + event, handler);
+    else 
+      if (element.addEventListener) 
+        element.addEventListener(event, handler, false);
+  }
+  function removeSelection(){
+    if (window.getSelection) { window.getSelection().removeAllRanges(); }
+    else if (document.selection && document.selection.clear)
+      document.selection.clear();
+  }
+  function killCtrlA(event){
+    var event = event || window.event;
+    var sender = event.target || event.srcElement;
+
+    if (sender.tagName.match(/INPUT|TEXTAREA/i))
+      return;
+
+    var key = event.keyCode || event.which;
+    if (event.ctrlKey && key == 'A'.charCodeAt(0))  // 'A'.charCodeAt(0) можно заменить на 65
+    {
+      removeSelection();
+
+      if (event.preventDefault) 
+        event.preventDefault();
+      else
+        event.returnValue = false;
+    }
+  }
+
+  // не даем выделять текст мышкой
+  addHandler(element, 'mousemove', function(){
+    if(preventSelection)
+      removeSelection();
+  });
+  addHandler(element, 'mousedown', function(event){
+    var event = event || window.event;
+    var sender = event.target || event.srcElement;
+    preventSelection = !sender.tagName.match(/INPUT|TEXTAREA/i);
+  });
+
+  // борем dblclick
+  // если вешать функцию не на событие dblclick, можно избежать
+  // временное выделение текста в некоторых браузерах
+  addHandler(element, 'mouseup', function(){
+    if (preventSelection)
+      removeSelection();
+    preventSelection = false;
+  });
+
+  // борем ctrl+A
+  // скорей всего это и не надо, к тому же есть подозрение
+  // что в случае все же такой необходимости функцию нужно 
+  // вешать один раз и на document, а не на элемент
+  addHandler(element, 'keydown', killCtrlA);
+  addHandler(element, 'keyup', killCtrlA);
+}
+preventSelection(document);
+
+</script>
